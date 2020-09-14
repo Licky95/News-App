@@ -1,3 +1,11 @@
+This is a responsive News-App where you are given a flexibility to choose your news source.
+On selecting a news source, corresponding news articles are shown.
+
+Note: To make this app work, please add a file called .env in your root directory
+Add your api key in .env folder. Your api key should be prefixed with <REACT_APP>
+### REACT_APP_API_KEY="your api key"
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
