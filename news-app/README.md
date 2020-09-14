@@ -1,5 +1,6 @@
 This is a responsive News-App where you are given a flexibility to choose your news source.
 On selecting a news source, corresponding news articles are shown.
+
 API used : https://newsapi.org/ 
 Login to https://newsapi.org/ to generate your API key
 
