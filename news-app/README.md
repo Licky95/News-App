@@ -6,7 +6,6 @@ Add your api key in .env folder. Your api key should be prefixed with <REACT_APP
 ### REACT_APP_API_KEY="your api key"
 
 
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
