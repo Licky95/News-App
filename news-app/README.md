@@ -5,9 +5,12 @@ API used : https://newsapi.org/
 Login to https://newsapi.org/ to generate your API key
 
 Note: To make this app work, please follow the following steps.
+
 1. add a file called .env in your root directory
+
 2.Add your api key in .env folder. Your api key should be prefixed with <REACT_APP> as shown below
 ### REACT_APP_API_KEY="your api key"
+
 3.Now restart the application
 
 For easy access, I have created .env file, all you need to do is paste your API key in .env file.
