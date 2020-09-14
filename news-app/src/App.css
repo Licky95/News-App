@@ -1,0 +1,135 @@
+.App {
+  text-align: center;
+  margin :0 auto;
+}
+
+.App-header {
+  text-align: center; 
+  font-size: calc(10px + 2vmin);
+  color: #4267B2;
+}
+
+.searchBox select {
+  margin-bottom: 20px;
+  padding:20px 50px 20px 20px;;
+  border:2px solid #4267B2;
+  color:#4267B2;
+  font-weight: 900;
+  word-wrap: break-word;
+  border-radius: 5px;
+  background: url('./Assets/downArowBlue.png') 96% / 15% no-repeat white;
+   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;  
+}
+ 
+select option{
+  color:black;
+  
+}
+select:focus{
+  border:2px solid 4267B2;
+  outline:none;
+  
+}
+select:active{
+  border:2px solid 4267B2;
+  outline:none;
+}
+.content{
+  display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin: 0 20px 20px;
+    max-height: 383.33px;
+    overflow:hidden;
+    border: 0;
+    box-shadow:  5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -moz-box-shadow: 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -webkit-box-shadow: 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    padding: 20px;
+    overflow: hidden;
+}
+.article{
+  width: 70%;
+    text-align: justify;
+    padding: 10px;
+}
+.loading {
+  background: transparent url('./Assets/spinner.gif') center no-repeat;
+  margin-right: 15px;
+  float: left;
+  width:30%;
+  height: 150px;
+}
+.description{
+  width:60%;
+  text-align: center;
+}
+.scrollText {
+  height: 50px;	
+  overflow: hidden;
+  position: relative;
+ }
+ .scrollText h4 {
+  font-size: 3em;
+  color: Red;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  line-height: 50px;
+  text-align: center;
+  /* Starting position */
+  -moz-transform:translateX(100%);
+  -webkit-transform:translateX(100%);	
+  transform:translateX(100%);
+  
+  -moz-animation: scrollText 10s linear infinite;
+  -webkit-animation: scrollText 10s linear infinite;
+  animation: scrollText 10s linear infinite;
+ }
+ /* Move it (define the animation) */
+ @-moz-keyframes scrollText {
+  0%   { -moz-transform: translateX(100%); }
+  100% { -moz-transform: translateX(-100%); }
+ }
+ @-webkit-keyframes scrollText {
+  0%   { -webkit-transform: translateX(100%); }
+  100% { -webkit-transform: translateX(-100%); }
+ }
+ @keyframes scrollText {
+  0%   { 
+  -moz-transform: translateX(100%); 
+  -webkit-transform: translateX(100%); 
+  transform: translateX(100%); 		
+  }
+  100% { 
+  -moz-transform: translateX(-100%); 
+  -webkit-transform: translateX(-100%); 
+  transform: translateX(-100%); 
+  }
+ }
+
+@media only screen and (max-width: 640px) {
+  /* For mobile phones: */
+  .description {
+    width: 100%;
+    padding: 5px;
+  }
+  .loading {
+      width: 100%;
+      max-width:100%;
+  }
+  .content{
+      display:block;
+      margin: 0 20px 20px;
+      max-height: 383.33px;
+      overflow:hidden;
+      border: 0;
+      box-shadow:  5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+      padding: 20px;
+      
+  }
+}
