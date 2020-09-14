@@ -18,7 +18,7 @@ class NewsList extends Component {
     this.setState({ loading: true });
     axios.get(api + process.env.REACT_APP_API_KEY).then((response) => {
       let sourcesData = response.data;
-      this.setState({ sources: sourcesData.sources, loading: false });
+      this.setState({ ...this.state,sources: sourcesData.sources, loading: false });
     });
   }
 // Handler to set selected news source to state
@@ -54,7 +54,7 @@ class NewsList extends Component {
             )}
           </div>
 
-          {this.state.selectedSource && (
+          {!this.state.loading && (
             <div className="content-container">
               <div className="scrollText">
                 <h4>{` You are viewing ${this.state.selectedSource.toUpperCase()} bulletins`}</h4>
