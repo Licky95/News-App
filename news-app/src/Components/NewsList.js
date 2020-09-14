@@ -7,7 +7,7 @@ class NewsList extends Component {
     super(props);
     this.state = {
       sources: [],
-      selectedSource: "cbc-news",
+      selectedSource: "bbc-news",
       loading: true,
     };
     this.onChange = this.onChange.bind(this);
