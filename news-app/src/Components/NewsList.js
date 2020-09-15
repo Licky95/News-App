@@ -12,18 +12,22 @@ class NewsList extends Component {
     };
     this.onChange = this.onChange.bind(this);
   }
-//Code to fetch different news sources
+  //Code to fetch different news sources
   componentDidMount() {
     const api = "https://newsapi.org/v2/sources?language=en&apiKey=";
     this.setState({ loading: true });
     axios.get(api + process.env.REACT_APP_API_KEY).then((response) => {
       let sourcesData = response.data;
-      this.setState({ ...this.state,sources: sourcesData.sources, loading: false });
-    });
+      this.setState({ ...this.state, sources: sourcesData.sources, loading: false });
+    })
+      .catch(err => {
+        this.setState({
+          ...this.state, loading: true
+        })
+      });
   }
-// Handler to set selected news source to state
+  // Handler to set selected news source to state
   onChange(e) {
-    console.log(e.target.value);
     this.setState({
       selectedSource: e.target.value,
     });
@@ -39,19 +43,19 @@ class NewsList extends Component {
         <div>
           <div className="searchBox">
             {this.state.loading ? (
-              <h4>Loading. . .</h4>
+                <h4>Loading. . .</h4>
             ) : (
-              <select
-                value={this.state.selectedSource}
-                onChange={this.onChange}
-              >
-                {this.state.sources.map((source) => (
-                  <option key={source.id} value={source.id}>
-                    {source.name}
-                  </option>
-                ))}
-              </select>
-            )}
+                <select
+                  value={this.state.selectedSource}
+                  onChange={this.onChange}
+                >
+                  {this.state.sources.map((source) => (
+                    <option key={source.id} value={source.id}>
+                      {source.name}
+                    </option>
+                  ))}
+                </select>
+              )}
           </div>
 
           {!this.state.loading && (

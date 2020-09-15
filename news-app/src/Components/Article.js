@@ -1,9 +1,9 @@
 import React from "react";
-
+//displaying article content
 const Article = (props) => {
   const { article } = props;
   return (
-    <div class="content">
+    <div className="content">
       <div className="description">
         <h4>
           <a href={article.url} target="_blank" rel="noopener noreferrer">

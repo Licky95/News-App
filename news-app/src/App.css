@@ -52,6 +52,10 @@ select:active{
     overflow: hidden;
 }
 
+.article-container{
+  max-width:900px;
+  margin:0 auto
+}
 .loading {
   background: transparent url('./Assets/spinner.gif') center no-repeat;
   margin-right: 15px;
@@ -61,7 +65,13 @@ select:active{
 }
 .description{
   width:60%;
-  text-align: center;
+  text-align: left;
+}
+.description a{
+  color: #4267B2;
+}
+.description small{
+  opacity:0.5;
 }
 .scrollText {
   height: 50px;	
@@ -77,7 +87,6 @@ select:active{
   margin: 0;
   line-height: 50px;
   text-align: center;
-  /* Starting position */
   -moz-transform:translateX(100%);
   -webkit-transform:translateX(100%);	
   transform:translateX(100%);
@@ -86,7 +95,7 @@ select:active{
   -webkit-animation: scrollText 10s linear infinite;
   animation: scrollText 10s linear infinite;
  }
- /* Move it (define the animation) */
+
  @-moz-keyframes scrollText {
   0%   { -moz-transform: translateX(100%); }
   100% { -moz-transform: translateX(-100%); }
